@@ -6,7 +6,7 @@ readme = "README.rst"
 keywords = ["metrics", "datadog", "statsd"]
 authors = [{name = "Will Kahn-Greene"}]
 license = {text = "MPLv2"}
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 dependencies = []
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -14,7 +14,6 @@ classifiers = [
     "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
     "Natural Language :: English",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -54,7 +53,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.ruff]
 line-length = 88
-target-version = "py39"
+target-version = "py310"
 src = ["src"]
 
 [tool.ruff.lint]
@@ -78,9 +77,8 @@ filterwarnings = [
 legacy_tox_ini = """
 [tox]
 envlist =
-    py39
-    py39-lint
     py310
+    py310-lint
     py311
     py312
     py313
@@ -88,7 +86,6 @@ uv_python_preferences = only-managed
 
 [gh-actions]
 python =
-    3.9: py39
     3.10: py310
     3.11: py311
     3.12: py312
@@ -100,9 +97,9 @@ commands =
     pytest {posargs} tests/
     pytest --doctest-modules --pyargs markus
 
-[testenv:py39-lint]
+[testenv:py310-lint]
 allowlist_externals = ruff
-basepython = python3.9
+basepython = python3.10
 changedir = {toxinidir}
 commands = 
     ruff format --check src tests
