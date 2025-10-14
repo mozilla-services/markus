@@ -1,7 +1,7 @@
 [project]
 name = "markus"
 description = "Metrics system for generating statistics about your app"
-version = "5.1.0"
+version = "5.2.0"
 readme = "README.rst"
 keywords = ["metrics", "datadog", "statsd"]
 authors = [{name = "Will Kahn-Greene"}]

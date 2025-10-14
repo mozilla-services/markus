@@ -1,12 +1,26 @@
 History
 =======
 
+5.2.0 (October 14th, 2025)
+--------------------------
+
+**Features**
+
+* Added support for Python 3.14 (#181)
+
+**Backwards incompatible changes**
+
+* Dropped support for Python 3.9 (#180)
+
+* Switch to uv and just for maintenance and development (#167)
+
+
 5.1.0 (October 30th, 2024)
 --------------------------
 
 **Features**
 
-* Add support for Python 3.13 (#159)
+* Added support for Python 3.13 (#159)
 
 **Backwards incompatible changes**
 
