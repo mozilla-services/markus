@@ -77,7 +77,7 @@ class TestLoggingMetrics:
         assert caplog.record_tuples == [("markus", 20, "METRICS|incr|foo.blue|2|")]
 
     def test_utc_timezone_incr(self, caplog, time_machine):
-        time_machine.move_to("2017-03-06 16:30:00 +0000", tick=False)
+        time_machine.move_to("2017-03-06T16:30:00+00:00", tick=False)
         caplog.set_level("DEBUG")
         rec = MetricsRecord("incr", key="foo", value=10, tags=["key1:val", "key2:val"])
         lm = LoggingMetrics(options={"timestamp_mode": "utc"})
