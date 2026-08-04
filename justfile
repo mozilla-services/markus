@@ -34,7 +34,7 @@ clean:
     find src/markus/ tests/ -name __pycache__ | xargs rm -rf
     find src/markus/ tests/ -name '*.pyc' | xargs rm -rf
 
-# Build files for relase
+# Build files for release
 build: devenv
     rm -rf build/ dist/
     uv run python -m build
